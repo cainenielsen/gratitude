@@ -4,9 +4,7 @@
       <div class="ripple-box">
         <img id="turkey" src="@/assets/images/turkey.png">
         <h1>Thank you, {{ name }}</h1>
-        <p>
-          <slot name="message" />
-        </p>
+        <slot name="message" />
         <p><b>- Caine & Rebekah</b></p>
       </div>
     </div>
@@ -45,7 +43,8 @@ export default {
   padding-bottom: 10ch;
   padding-left: 10ch;
   padding-right: 10ch;
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3Cfilter%20id%3D%22roughpaper%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.015%22%20numOctaves%3D%225%22%20result%3D%22noise%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3CfeDiffuseLighting%20lighting-color%3D%22%23ecd7bb%22%20diffuseConstant%3D%221%22%20surfaceScale%3D%222%22%20result%3D%22diffLight%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3CfeDistantLight%20azimuth%3D%2245%22%20elevation%3D%2235%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C%2FfeDiffuseLighting%3E%0A%20%20%20%20%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%0A%20%20%20%20%3Crect%20filter%3D%22url(%23roughpaper)%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23ecd7bb%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  /* generated with this https://www.asiteaboutnothing.net/c_decode-url.html*/
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3Cfilter%20id%3D%22roughpaper%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.015%22%20numOctaves%3D%225%22%20result%3D%22noise%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3CfeDiffuseLighting%20lighting-color%3D%22%23e9d9c4%22%20diffuseConstant%3D%221%22%20surfaceScale%3D%222%22%20result%3D%22diffLight%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3CfeDistantLight%20azimuth%3D%2245%22%20elevation%3D%2235%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C%2FfeDiffuseLighting%3E%0A%20%20%20%20%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%0A%20%20%20%20%3Crect%20filter%3D%22url(%23roughpaper)%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e9d9c4%22%20%2F%3E%0A%3C%2Fsvg%3E");
   clip-path: polygon(
     1% 2%,
     3.5% 0.1%,

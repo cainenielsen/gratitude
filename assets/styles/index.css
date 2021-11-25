@@ -1,5 +1,5 @@
 body {
-  background-image: url("@/assets/images/leaves.jpg");
+  background-image: url("/leaves.jpg");
   background-size: cover;
   font-family: "Indie Flower", cursive;
   margin: 0px;
