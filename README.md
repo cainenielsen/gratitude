@@ -1,69 +1,58 @@
-# gratitude-nuxt
+# 🦃 gratitude
 
-## Build Setup
+A Thanksgiving gratitude site — one page per person, each with a personal
+"Thank you" note. Built with Nuxt 2, generated to static HTML, deployed
+via Firebase Hosting.
 
-```bash
-# install dependencies
-$ npm install
+## How it works
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+Every person gets their own route (`pages/<name>.vue`), which just
+supplies a name and a message to the shared [`Sheet`](components/Sheet.vue)
+component — a torn-paper card with a wiggling turkey and a signature line.
+Adding someone new is adding a new page file.
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+```vue
+<template>
+  <Sheet name="Alex">
+    <template #message>
+      <p>Your message here.</p>
+    </template>
+  </Sheet>
+</template>
 
-# generate static project
-$ npm run generate
+<script>
+export default {};
+</script>
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## Project setup
 
-## Special Directories
+```bash
+npm install
+```
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+### Serve with hot reload at localhost:3000
 
-### `assets`
+```bash
+npm run dev
+```
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+### Generate the static site
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+```bash
+npm run generate
+```
 
-### `components`
+### Deploy to Firebase Hosting
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+```bash
+npm run deploy
+# or, generate + deploy in one step:
+npm run launch
+```
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+Firebase project: `caineandrebekah-gratitude` (see [.firebaserc](.firebaserc)).
 
-### `layouts`
+## Tech
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+[Nuxt 2](https://nuxtjs.org) (static target) + [@nuxt/content](https://content.nuxtjs.org/).
